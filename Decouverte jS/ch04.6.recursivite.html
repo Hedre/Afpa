@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Récursivité</title>
+    </head>
+
+    <body>
+        <h1>Les fonctions récursives</h1>
+			
+		<script>
+		function decompte(nombre) {
+			console.log(nombre);
+			
+			if (nombre > 0)	decompte(nombre-1);
+		}
+
+		decompte(10);
+
+		</script>
+    </body>
+</html>

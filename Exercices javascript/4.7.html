@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1 - INITIALISATION
+        var age = parseInt(prompt("Entrez 1 si âge >= 25 ans, sinon 0"));
+        var permis = parseInt(prompt("Entrez 1 si permis > 2 ans, sinon 0"));
+        var accident = parseInt(prompt("Entrez le nombre d'accidents"));
+        var msg = "";
+
+        //  2 - TRAITEMENT
+        var points = age + permis - accident;
+        if (points >= 0){
+            var ancient = parseInt(prompt("Entrez 1 si anciennneté > 1 an, sinon 0"));
+            points += ancient;
+        }
+
+       /* // 3 - AFFICHAGE
+        if (points == 0){
+            msg = "Rouge";
+        } else if (points == 1){
+            msg = "Orange";
+        } else if (points == 2){
+            msg = "Vert";
+        } else if (points == 3){
+            msg = "Bleu";
+        } else {
+            msg = "Refusé";
+        } */
+        switch (points){
+            case 0:
+                msg = "Rouge";
+                break;
+            case 1: 
+                msg = "Orange";
+                break;
+            case 2:
+                msg = "Vert";
+                break;
+            case 3: 
+                msg = "Bleu";
+                break;
+            default:
+                msg = "Refusé";
+        }
+
+        console.log(msg);
+
+    </script>
+</body>
+</html>
